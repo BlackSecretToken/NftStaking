@@ -169,7 +169,7 @@ contract StakingSystem is Ownable, ERC721Holder {
                 
                 staker.balance +=  token * stakedDays;
 
-                staker.tokenStakingCoolDown[ids[i]] = block.timestamp + partialTime;
+                staker.tokenStakingCoolDown[ids[i]] = block.timestamp - partialTime;
 
                 console.logUint(staker.tokenStakingCoolDown[ids[i]]);
                 console.logUint(staker.balance);
